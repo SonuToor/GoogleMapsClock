@@ -35,9 +35,6 @@ function addDate() {
   fecha.innerHTML = (`${year}-${month + 1}-${day}`);
 }
 
-
-// next step is to make map load with coordinates set at the right spot 
-
 var map;
 
 function initMap() {
@@ -52,20 +49,6 @@ function initMap() {
   });
 }
 
-
-
-
-setInterval(setTime, 1000);
-addDate();
-
-
-// when you understand node.js, use this https://www.npmjs.com/package/local-reverse-geocoder
-
-// maybe change background picture based on location 
-
-
-
-
 function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(browserHasGeolocation ?
@@ -73,3 +56,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
                         'Error: Your browser doesn\'t support geolocation.');
   infoWindow.open(map);
 }
+
+
+setInterval(setTime, 1000);
+addDate();
